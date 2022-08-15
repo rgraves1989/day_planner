@@ -123,7 +123,7 @@ function loadEventColors(hour) {
     // Determine if the event is in the past, present, or future
     if (currentHourVal === eventHourVal && currentHourDayNight === eventHourDayNight) {
         thisRow.addClass("present")
-    } else if ((currentHourDayNight == "PM" && eventHourDayNight == "AM") ||
+    } else if ((currentHourDayNight === "PM" && eventHourDayNight === "AM") ||
         (currentHourDayNight === eventHourDayNight && 
             currentHourVal !== 12 &&
             (currentHourVal > eventHourVal || eventHourVal === 12))) {
