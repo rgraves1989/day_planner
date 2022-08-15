@@ -61,7 +61,7 @@ function getTimeSlotHtml(hour) {
             <div class="col-sm-12 col-md-8 event-name">
                 <textarea id="event_` + hour + `" class="event-text form-control" placeholder="Add your scheduler notes here..."></textarea>
             </div>
-            <div class="w-100 d-block d-md-none"></div>
+            <div class="w-100 d-block d-md-none">&nbsp;</div>
             <div class="col-sm-12 col-md-2">
                 <button type="button" class="save-btn btn">
                     <div class="button-content">
