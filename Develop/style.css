@@ -151,6 +151,14 @@ h1 {
 }
 
 @media(max-width: 768px) {
+  .scheduler-jumbotron {
+    padding-bottom: 2.5rem;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
   .now {
     flex-direction: column;
   }
