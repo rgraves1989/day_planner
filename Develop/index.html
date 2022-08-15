@@ -23,143 +23,18 @@
 		
 		<title>Work Day Scheduler</title>
 	</head>
-
 	<body>
-		<header class="jumbotron">
-			<h1 class="display-3">Work Day Scheduler</h1>
-			<p class="lead">A simple calendar app for scheduling your work day</p>
-			<p id="currentDay" class="lead"></p>
-			<p id="currentTime" class="lead"></p>
+		<header class="scheduler-jumbotron jumbotron">
+			<h1>Work Day Scheduler</h1>
+			<p class="lead font-italic">A simple calendar app for scheduling your work day...</p>
 		</header>
-		<div class="container">
-			<div class="row row_9AM">
-				<div class="col time">
-					9AM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_9AM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
-			<div class="row row_10AM">
-				<div class="col time">
-					10AM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_10AM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
-			<div class="row row_11AM">
-				<div class="col time">
-					11AM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_11AM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
-			<div class="row row_12PM">
-				<div class="col time">
-					12PM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_12PM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
-			<div class="row row_1PM">
-				<div class="col time">
-					1PM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_1PM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
-			<div class="row row_2PM">
-				<div class="col time">
-					2PM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_2PM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
-			<div class="row row_3PM">
-				<div class="col time">
-					3PM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_3PM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
-			<div class="row row_4PM">
-				<div class="col time">
-					4PM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_4PM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
-			<div class="row row_5PM">
-				<div class="col time">
-					5PM
-				</div>
-				<div class="col-md-8 event-name">
-					<input type="text" id="event_5PM" class="form-control" placeholder="Event name...">
-				</div>
-				<div class="col">
-					<button type="button" class="btn btn-primary save-button">
-						<i class="bi bi-save"></i>
-						<span>Save</span>
-					</button>
-				</div>
-			</div>
+		<div class="now">
+			<span id="currentDay"></span>
+			<span id="currentTime"></span>
 		</div>
-
+		<div class="container">
+			<!-- Scheduler HTML will dynamically load here -->
+		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
