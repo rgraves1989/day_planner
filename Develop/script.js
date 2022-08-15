@@ -8,7 +8,7 @@ updateTime()
 setInterval(updateTime, 1000)
 function updateTime() {
     now = moment()
-    $("#currentTime").text(now.format("h:mm:ss a"))
+    $("#currentTime").text(now.format("h:mm:ss A"))
 }
 
 
@@ -49,11 +49,31 @@ function saveEvent(hour) {
 }
 
 function loadEvents() {
-    console.log(hourList)
     for (let i =0; i < hourList.length; i++) {
         let eventStorageName = now.format("M_D_YYYY_") + hourList[i]
         $("#event_" + hourList[i]).val(localStorage.getItem(eventStorageName))
+        loadEventColors(hourList[i])
     }
 }
+
+function loadEventColors(hour) {
+    console.log(hour)
+    let currentHour =  now.format("hhA")
+    let currentHourVal = parseInt(currentHour.substr(0,currentHour.length-2))
+    let currentHourDayNight = currentHour.substr(currentHour.length-2)
+    let eventHourVal = parseInt(hour.substr(0,hour.length-2))
+    let eventHourDayNight = hour.substr(hour.length-2)
+    if (currentHourVal === eventHourVal && currentHourDayNight === eventHourDayNight) {
+        $(".row_" + hour).addClass("present")
+    } else if ((currentHourDayNight == "PM" && eventHourDayNight == "AM") ||
+        (currentHourDayNight === eventHourDayNight && 
+            (currentHourVal > eventHourVal || eventHourVal === 12))) {
+        $(".row_" + hour).addClass("past")
+    } else {
+        console.log(currentHourDayNight, " ", eventHourDayNight)
+        $(".row_" + hour).addClass("future")
+    }
+}
+
 
 
